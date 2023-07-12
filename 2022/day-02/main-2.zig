@@ -25,29 +25,29 @@ pub fn main() !void {
 
         switch (me) {
             'X' => {
-                score += 1;
+                score += 0;
                 switch (oponent) {
                     'A' => score += 3,
-                    'B' => score += 0,
-                    'C' => score += 6,
+                    'B' => score += 1,
+                    'C' => score += 2,
                     else => unreachable,
                 }
             },
             'Y' => {
-                score += 2;
+                score += 3;
                 switch (oponent) {
-                    'A' => score += 6,
-                    'B' => score += 3,
-                    'C' => score += 0,
+                    'A' => score += 1,
+                    'B' => score += 2,
+                    'C' => score += 3,
                     else => unreachable,
                 }
             },
             'Z' => {
-                score += 3;
+                score += 6;
                 switch (oponent) {
-                    'A' => score += 0,
-                    'B' => score += 6,
-                    'C' => score += 3,
+                    'A' => score += 2,
+                    'B' => score += 3,
+                    'C' => score += 1,
                     else => unreachable,
                 }
             },
