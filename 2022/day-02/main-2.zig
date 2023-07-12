@@ -1,11 +1,4 @@
 const std = @import("std");
-fn idk(reader: std.Reader, writer: std.Writer, delimiter: u8) !void {
-    while (true) {
-        const byte: u8 = try reader.readByte(); // (Error || error{EndOfStream})
-        if (byte == delimiter) return;
-        try writer.writeByte(byte); // @TypeOf(writer).Error
-    }
-}
 
 pub fn main() !void {
     const allocator = std.heap.page_allocator;
